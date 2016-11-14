@@ -1,0 +1,24 @@
+	<p>
+		<%=	f.label :name, "Nombre: " %>
+		<%=	f.text_field :name %>
+	</p>
+	<p>
+		<%=	f.label :born_at, "Fecha Nacimiento: " %>
+		<%=	f.date_field :born_at %>
+	</p>
+	<p>
+		<%=	f.label :observations, "Observaciones: " %>
+		<%=	f.text_area :observations %>
+	</p>
+	<p>
+		<%=	f.label :breed, "Raza de Mascota: " %>
+		<%=	f.text_field :breed %>
+	</p>
+	<p>
+		<%=	f.label :type_pet, "Tipo de Mascota: " %>
+		<%=	f.select :type_pet, Pet.types_of_pets %>
+	</p>
+	<p>
+		<%=	f.label :pet_url, "Imagen: " %>
+		<%=	f.url_field :pet_url %>
+	</p>

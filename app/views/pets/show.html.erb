@@ -1,0 +1,42 @@
+<h1><b> <%= @pet.name %> </b></h1>
+
+<p> <i> <%= @pet.observations %> <i></p>
+<hr> </hr>
+<ul>
+	<li>
+		<strong>ID: </strong>
+		<%= @pet.id %>
+	</li>
+	<li>
+		<strong>Fecha de Nacimiento: </strong>
+		<%= nice_date(@pet.born_at) %>
+	</li>
+	<li>
+		<strong>Foto: </strong>
+		<%= @pet.pet_url %>
+	</li>
+	<li>
+		<strong>Raza: </strong>
+		<%= @pet.breed %>
+	</li>
+	<li>
+		<strong>Tipo de Mascota: </strong>
+		<%= @pet.type_pet %>
+	</li>
+	<li>
+		<strong>Total en Citas: </strong>
+		<%= @pet.sum_of_appointments %>
+	</li>
+</ul>
+
+<%= render partial: "pet_appointments", locals: {appointments: @pet.appointments} %>
+
+<p>
+	<table>
+		<tr>
+			<td><%= link_to "Editar Mascota", edit_pet_path %></td>
+			<td><%= link_to "Crear una cita", new_pet_appointment_path(@pet) %></td>
+		</tr>
+	</table>
+	
+</p>
