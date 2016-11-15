@@ -1,5 +1,6 @@
 class Pet < ActiveRecord::Base
 	belongs_to :owner
+	belongs_to :animal
 	has_many :appointments
 	
 	validates_presence_of :name, :born_at
@@ -7,9 +8,5 @@ class Pet < ActiveRecord::Base
 
 	def sum_of_appointments
 		self.appointments.sum(:amount)
-	end
-
-	def self.types_of_pets
-		["Anfibio", "Ave", "Gato", "Perro", "Pez", "Reptil", "Roedor"]
 	end
 end

@@ -16,14 +16,6 @@
 		<%= @pet.pet_url %>
 	</li>
 	<li>
-		<strong>Raza: </strong>
-		<%= @pet.breed %>
-	</li>
-	<li>
-		<strong>Tipo de Mascota: </strong>
-		<%= @pet.type_pet %>
-	</li>
-	<li>
 		<strong>Total en Citas: </strong>
 		<%= @pet.sum_of_appointments %>
 	</li>
@@ -35,6 +27,7 @@
 	<table>
 		<tr>
 			<td><%= link_to "Editar Mascota", edit_pet_path %></td>
+			<td><%= link_to "Eliminar Mascota", @pet, method: :delete, data: {confirm: "Estas Seguro?"}  %> </td>
 			<td><%= link_to "Crear una cita", new_pet_appointment_path(@pet) %></td>
 		</tr>
 	</table>

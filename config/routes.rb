@@ -9,6 +9,7 @@ resources :pets do
   resources :appointments, except: [:index,:delete]
 end
 resources :owners
+resources :animals
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

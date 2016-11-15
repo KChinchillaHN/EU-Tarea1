@@ -38,9 +38,7 @@ class OwnersController < ApplicationController
   def destroy
   	@owner = Owner.find(params[:id])
   	@owner.destroy
-  	redirect_to owners_path
-
-  	
+  	redirect_to owners_path  	
   end
 
   protected
